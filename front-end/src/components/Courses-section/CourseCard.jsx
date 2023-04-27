@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const CourseCard = (props) => {
-  const { imgUrl, title, lesson, students, rating } = props.item;
-
+  const { imgUrl, title, lesson, students, rating, route } = props.item;
+  const url = "tutorials/" + route;
   return (
     <div className="single__course__item">
       <div className="course__img">
@@ -28,7 +29,8 @@ const CourseCard = (props) => {
           </p>
 
           <p className="enroll d-flex align-items-center gap-1">
-            <a href="#"> Enroll Now</a>
+            {/* <a href="#"> Start Course</a> */}
+            <Link to={url}>Start Course</Link>
           </p>
         </div>
       </div>

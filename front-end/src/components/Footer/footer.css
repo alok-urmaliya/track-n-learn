@@ -12,6 +12,7 @@
 
 .link__list .link__item {
   background: transparent;
+  cursor: pointer;
 }
 
 .link__list a {

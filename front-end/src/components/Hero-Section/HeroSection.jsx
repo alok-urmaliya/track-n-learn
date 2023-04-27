@@ -5,7 +5,7 @@ import "./hero-section.css";
 
 const HeroSection = () => {
   return (
-    <section>
+    <section id="#Hero">
       <Container>
         <Row>
           <Col lg="6" md="6">
@@ -14,7 +14,9 @@ const HeroSection = () => {
                 Anytime Anywhere <br /> Learn on your <br /> Suitable Schedule
               </h2>
               <p className="mb-5">
-                Here at track-n-learn we have <br /> Collected perfectly lined up beginner friendly content<br />
+                Here at track-n-learn we have <br /> Collected perfectly lined
+                up beginner friendly content
+                <br />
                 for you to start your coding journey.
               </p>
             </div>

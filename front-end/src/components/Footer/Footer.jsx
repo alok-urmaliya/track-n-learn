@@ -1,21 +1,22 @@
 import React from "react";
 import { Container, Row, Col, ListGroup, ListGroupItem } from "reactstrap";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 import "./footer.css";
 
 const footerQuickLinks = [
   {
     display: "Home",
-    url: "#",
+    url: "#Hero",
   },
   {
     display: "About US",
-    url: "#",
+    url: "#About",
   },
 
   {
     display: "Courses",
-    url: "#",
+    url: "#Courses",
   },
 ];
 
@@ -26,7 +27,7 @@ const Footer = () => {
         <Row>
           <Col lg="3" md="6" className="mb-4">
             <h2 className=" d-flex align-items-center gap-1">
-              <i class="ri-pantone-line"></i> Learners.
+              <i class="ri-pantone-line"></i> track-n-learn
             </h2>
 
             <div className="follows">
@@ -67,7 +68,10 @@ const Footer = () => {
               {footerQuickLinks.map((item, index) => (
                 <ListGroupItem key={index} className="border-0 ps-0 link__item">
                   {" "}
-                  <a href={item.url}>{item.display}</a>
+                  {/* <a href={item.url}>{item.display}</a> */}
+                  <Link className="link__item" to={item.url} duration={10}>
+                    {item.display}
+                  </Link>
                 </ListGroupItem>
               ))}
             </ListGroup>
@@ -78,7 +82,7 @@ const Footer = () => {
 
             <p>Address: Jabalpur,Madhya Pradesh</p>
             <p> Phone: +917389830244, +917089353896</p>
-            <p>Email:  learn-n-earn@gmail.com</p>
+            <p>Email: learn-n-earn@gmail.com</p>
           </Col>
         </Row>
       </Container>

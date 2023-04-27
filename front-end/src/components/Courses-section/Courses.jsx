@@ -15,6 +15,7 @@ const coursesData = [
     students: 12.5,
     rating: 4.9,
     imgUrl: courseImg1,
+    route: "javascript",
   },
 
   {
@@ -24,6 +25,7 @@ const coursesData = [
     students: 12.5,
     rating: 4.5,
     imgUrl: courseImg2,
+    route: "csharp",
   },
 
   {
@@ -33,6 +35,7 @@ const coursesData = [
     students: 12.5,
     rating: 4.5,
     imgUrl: courseImg3,
+    route: "python",
   },
   {
     id: "05 ",
@@ -41,12 +44,13 @@ const coursesData = [
     students: 12.5,
     rating: 4.3,
     imgUrl: courseImg4,
+    route: "cpp",
   },
 ];
 
 const Courses = () => {
   return (
-    <section>
+    <section id="#Courses">
       <Container>
         <Row>
           <Col lg="12" className="mb-5">
@@ -59,15 +63,11 @@ const Courses = () => {
                   working in order to provide you more.
                 </p>
               </div>
-
-              <div className="w-50 text-end">
-                <button className="btn">See All</button>
-              </div>
             </div>
           </Col>
           {coursesData.map((item) => (
             <Col lg="4" md="6" sm="6">
-              <CourseCard key={item.id} item={item} />
+              <CourseCard key={item.id} route={item.url} item={item} />
             </Col>
           ))}
         </Row>

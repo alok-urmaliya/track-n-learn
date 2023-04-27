@@ -7,7 +7,7 @@ import "./about.css";
 
 const AboutUs = () => {
   return (
-    <section>
+    <section id="#About">
       <Container>
         <Row>
           <Col lg="6" md="6">
@@ -20,9 +20,9 @@ const AboutUs = () => {
             <div className="about__content">
               <h2>About Us</h2>
               <p>
-                We as a team of computer science students, are trying
-                to make the process of learning new technologies easy,
-                for students like we were two years ago.
+                We as a team of computer science students, are trying to make
+                the process of learning new technologies easy, for students like
+                we were two years ago.
               </p>
 
               <div className="about__counter">
@@ -50,7 +50,9 @@ const AboutUs = () => {
                       <CountUp start={0} end={4} duration={2} />
                     </span>
 
-                    <p className="counter__title">Complete language tutorials</p>
+                    <p className="counter__title">
+                      Complete language tutorials
+                    </p>
                   </div>
                   {/* 
                   <div className="single__counter">
