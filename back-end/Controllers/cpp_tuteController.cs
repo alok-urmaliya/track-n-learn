@@ -22,7 +22,7 @@ namespace back_end.Controllers
                 return NotFound();
             }
 
-            var cppTutorial = _appContext.cpp_tute.ToList();
+            var cppTutorial = _appContext.cpp_tute.OrderBy(e => e.topic_code).ToList();
             return cppTutorial;
         }
 

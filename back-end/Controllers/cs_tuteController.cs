@@ -23,7 +23,7 @@ namespace back_end.Controllers
                 return NotFound();
             }
 
-            var csTutorial = _appContext.cs_tute.ToList();
+            var csTutorial = _appContext.cs_tute.OrderBy(e => e.topic_code).ToList();
             return csTutorial;
         }
 

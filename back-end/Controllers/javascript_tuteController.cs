@@ -22,7 +22,7 @@ namespace back_end.Controllers
                 return NotFound();
             }
 
-            var javascriptTutorial = _appContext.javascript_tute.ToList();
+            var javascriptTutorial = _appContext.javascript_tute.OrderBy(e => e.topic_code).ToList();
             return javascriptTutorial;
             //to get inactive employees also.
             //return await _context.Employee.ToListAsync();

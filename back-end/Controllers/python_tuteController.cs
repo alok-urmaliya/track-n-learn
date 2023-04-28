@@ -22,7 +22,7 @@ namespace back_end.Controllers
                 return NotFound();
             }
 
-            var pythonTutorial = _appContext.python_tute.ToList();
+            var pythonTutorial = _appContext.python_tute.OrderBy(e => e.topic_code).ToList();
             return pythonTutorial;
         }
 
