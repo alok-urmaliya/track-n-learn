@@ -32,8 +32,8 @@ namespace back_end.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("topic_code")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int?>("topic_code")
+                        .HasColumnType("int");
 
                     b.Property<string>("topic_name")
                         .IsRequired()
@@ -54,8 +54,8 @@ namespace back_end.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("topic_code")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int?>("topic_code")
+                        .HasColumnType("int");
 
                     b.Property<string>("topic_name")
                         .IsRequired()
@@ -76,11 +76,8 @@ namespace back_end.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("sort_key")
+                    b.Property<int?>("topic_code")
                         .HasColumnType("int");
-
-                    b.Property<string>("topic_code")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("topic_name")
                         .IsRequired()
@@ -101,8 +98,8 @@ namespace back_end.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("topic_code")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int?>("topic_code")
+                        .HasColumnType("int");
 
                     b.Property<string>("topic_name")
                         .IsRequired()

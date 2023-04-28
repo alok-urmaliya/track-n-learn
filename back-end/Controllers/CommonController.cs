@@ -22,7 +22,8 @@ namespace back_end.Controllers
             {
                 return NotFound();
             }
-            var topics = _appContext.javascript_tute.Select(e => e.topic_name).ToList();
+            var topics = _appContext.javascript_tute.OrderBy(e => e.topic_code).Select(e => e.topic_name).ToList();
+          
             return topics;
         } 
     }

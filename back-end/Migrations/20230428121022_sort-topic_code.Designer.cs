@@ -12,8 +12,8 @@ using back_end;
 namespace back_end.Migrations
 {
     [DbContext(typeof(AppContext))]
-    [Migration("20230425133716_Initialize")]
-    partial class Initialize
+    [Migration("20230428121022_sort-topic_code")]
+    partial class sorttopic_code
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -35,8 +35,8 @@ namespace back_end.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("topic_code")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int?>("topic_code")
+                        .HasColumnType("int");
 
                     b.Property<string>("topic_name")
                         .IsRequired()
@@ -57,8 +57,8 @@ namespace back_end.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("topic_code")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int?>("topic_code")
+                        .HasColumnType("int");
 
                     b.Property<string>("topic_name")
                         .IsRequired()
@@ -79,11 +79,8 @@ namespace back_end.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("sort_key")
+                    b.Property<int?>("topic_code")
                         .HasColumnType("int");
-
-                    b.Property<string>("topic_code")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("topic_name")
                         .IsRequired()
@@ -104,8 +101,8 @@ namespace back_end.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("topic_code")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int?>("topic_code")
+                        .HasColumnType("int");
 
                     b.Property<string>("topic_name")
                         .IsRequired()
